@@ -1,0 +1,369 @@
+*{
+    font-family: 'Spartan', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.w-60{
+    width: 60%;
+}
+
+/* header-section */
+.header-section{
+    background-color: #d3d4cf;
+}
+.header-section img{
+    width: 80px;
+}
+.header-section ul{
+    margin-left: 0;
+}
+.header-section ul li a {
+    padding: 15px;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    position: relative;
+}
+.header-section ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 10px;
+    bottom: -11px;
+    position: absolute;
+    background-color: rgb(66, 52, 202);
+    transition: .4s;
+}
+.header-section ul li a:hover::after{
+    
+    width: 81%;
+}
+.header-section ul li:nth-child(1) a{
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 81%;
+    color: rgb(66, 52, 202);
+
+}
+#active::after{
+    content: "";
+    width: 81%;
+    height: 2px;
+    left: 10px;
+    bottom: -11px;
+    position: absolute;
+    background-color: rgb(66, 52, 202);
+}
+
+.header-section ul li a:hover{}
+
+.header-btn a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    background: #fff;
+    padding: 11px 22px;
+    border-radius: 20px;
+}
+.header-btn a{
+    position: relative;
+    z-index: 1;
+}
+.header-btn a::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    background-color: #6e6bf7;
+    border-radius: 20px;
+    z-index: -1;
+    transition: .5s;
+}
+.header-btn a:hover{
+    color: #fff !important;
+}
+.header-btn a:hover::after{
+    width: 100%;
+}
+
+
+/* dropdown */
+
+.header-section ul li{
+    position: relative;
+}
+.header-section ul li ul {
+    position: absolute;
+    width: 180px;
+    margin-left: -12px !important;
+    left: 0;
+    top: 126%;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    
+}
+.header-section ul li ul li{
+    
+    display: block;
+    width: 100% !important;
+}
+.header-section ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+}
+.header-section ul li ul li a{
+    display: block;
+    color: #fff !important;
+    background-color: #000bff;
+    font-size: 10px;
+    border: 15px solid #fff;
+    width: 100% !important;
+
+}
+.header-section ul li ul li a::after{
+    content: "";
+    width: 0 !important;
+}
+/* banenr-section */
+.banner{
+    overflow: hidden !important;
+    height: 600px;
+    background-color: #edf6ff;
+}
+
+.banner-items{
+    margin-top: 150px;
+}
+.banner-items h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+.banner-items p{}
+
+.banner-btn{}
+.banner-btn a {
+    color: #fff;
+    background: #0d6efd;
+    display: inline-block;
+    font-size: 13px;
+    padding: 12px 15px;
+    border-radius: 25px;
+    margin-top: 22px;
+    border: 1px solid #0d6efd;
+}
+.banner-btn a:hover{
+    background-color: #fff;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.banner-img{
+    position: relative;
+}
+.banner-img img {
+    max-width: inherit;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    left: 85px;
+    top: -82px;
+}
+
+/* service section */
+.service{
+    padding-bottom: 70px;
+}
+.service-title{}
+.service-title h6 {
+    color: #9e90ec;
+}
+.service-title h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 45px;
+    position: relative;
+}
+.service-title h1::after {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 3px;
+    background-color: #9e90ec;
+    left: 10px;
+    bottom: -5px;
+}
+.service-title p{}
+
+.service-items{
+    background: #f9fcff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .3s
+}
+.service-items h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.service-items .icon{}
+.service-items .icon i {
+    background: #5252f0;
+    color: #fff;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 23px;
+    border-radius: 50% 50% 50% 0px;
+    position: relative;
+    transition: .3s;
+}
+.service-items .icon i::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: #5252f0;
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    transition: .6s;
+}
+.service-items p {
+    font-size: 15px;
+    margin-top: 39px;
+}
+.service-items:hover{
+    background-color: #5252f0;
+    color: #fff;
+    border-radius: 10px;
+}
+.service-items:hover .icon i{
+    background-color: #fff;
+    color: #5252f0;;
+}
+.service-items:hover i::after{
+    background-color: #fff;
+    width: 80%;
+}
+.pattern-image{
+    position: relative;
+}
+.pattern-image img {
+    position: absolute;
+    left: -53px;
+    bottom: -34px;
+    z-index: -1;
+}
+
+/* animation section */
+.animation{
+    background: url(https://i.ibb.co/B2k2525/video-bg.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 170px 0;
+    position: relative;
+    z-index: 99;
+    color: #fff;
+}
+.animation::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 79, 107, .8);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.animation h5 {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+.animation h1 {
+    font-size: 27px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.animation p {
+    font-size: 15px;
+}
+.animation h1::after {
+    content: "";
+    position: absolute;
+    left: 167px;
+    bottom: -9px;
+    width: 20%;
+    height: 2px;
+    background-color: #fff;
+}
+.animation .play-button{
+    position: relative;
+}
+
+.animation .play-button::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 175px;
+    top: -10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: animation-btn 2s infinite;
+}
+.animation .play-button i {
+    color: #3763eb !important;
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    line-height: 80px;
+    border-radius: 50%;
+    font-size: 20px;
+    position: relative;
+    position: relative;
+    border: 1px solid #fff;
+   
+}
+.animation .play-button i::after {
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    left: -6px;
+    top: -6px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: animation-btn 2s infinite;
+}
+
+@keyframes animation-btn{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    25%{transform: scale(1.1);
+        opacity: .4;}
+    50%{transform: scale(1.2);
+        opacity: .6;}
+
+    75%{transform: scale(1.4);
+        opacity: .7;}
+
+    100%{transform: scale(1.6);
+        opacity: 0;}
+}
